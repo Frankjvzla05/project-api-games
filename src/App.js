@@ -3,15 +3,11 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from './components/header/header.component';
 import Footer from './components/footer/footer';
 import GamesContextProvider from "./contexts/GamesContext";
+import GameContextProvider from "./contexts/GameContext";
 import Games from "./components/Games";
-import "./assets/css/styles.css";
 import GameDetail from "./components/Games/GameDetail";
 import NotFound from "./components/NotFound";
-import GameContextProvider from "./contexts/GameContext";
-
-
-
-
+import "./assets/css/styles.css";
 
 function App() {
   return (
@@ -33,8 +29,6 @@ function App() {
       </Switch>
       <Footer />
     </BrowserRouter>
-
-
   );
 }
 

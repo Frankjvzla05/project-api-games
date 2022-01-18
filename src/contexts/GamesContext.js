@@ -1,11 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import { topGamesGet } from "./../constants"
 
-
-
-
 export const GamesContext = createContext();
-
 
 const GamesContextProvider = ({ children }) => {
 
@@ -30,12 +26,11 @@ const GamesContextProvider = ({ children }) => {
 
     return (
         <GamesContext.Provider value={{ doneFetch, topGames }}>
-          {children}
+            {children}
         </GamesContext.Provider>
-      );
+    );
 
 
 }
-
 
 export default GamesContextProvider

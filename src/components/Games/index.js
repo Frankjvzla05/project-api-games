@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { GamesContext } from "./../../contexts/GamesContext";
 import InfoGames from "./Games";
-import "../../assets/css/styles.css"
 
 const Games = () => {
     const { topGames, doneFetch } = useContext(GamesContext);
@@ -11,13 +10,13 @@ const Games = () => {
         <div className="games-page">
 
 
-            {doneFetch ? 
-                ( topGames.length ? 
+            {doneFetch ?
+                (topGames.length ?
                     <InfoGames topGames={topGames} />
-                 : 
+                    :
                     "error")
-                
-             : 
+
+                :
                 "No se encontro la informacion"
             }
 
